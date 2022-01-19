@@ -1,0 +1,165 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the README at:
+// https://github.com/microsoft/vscode-dev-containers/tree/v0.202.5/containers/debian
+{
+	"name": "LaTeX",
+	"build": {
+		"dockerfile": "Dockerfile",
+		// Update 'VARIANT' to pick an Debian version: bullseye, buster, stretch
+		// Use bullseye or stretch on local arm64/Apple Silicon.
+		"args": { "VARIANT": "buster" }
+	},
+
+	// Set *default* container specific settings.json values on container create.
+	"settings": {
+		"cSpell.allowCompoundWords": false,
+		"cSpell.ignorePaths": [
+			"node_modules",
+			"**/node_modules",
+			"**/node_modules/**",
+			"node_modules/**",
+			"vscode-extension",
+			".git",
+			"*.dll",
+			"**/*.dll",
+			".pre-commit-config.yaml"
+		],
+		"cSpell.ignoreWords": [
+			"RASA"
+		],
+		// cSpell
+		"cSpell.language": "en",
+		"cSpell.showStatus": true,
+		"cSpell.userWords": [
+			"CLOUDSDK",
+			"PGHOST",
+			"PGPASSWORD",
+			"Postgres",
+			"Serverspec",
+			"allexport",
+			"azuretools",
+			"bitnami",
+			"centos",
+			"chmod",
+			"creds",
+			"devcontainer",
+			"docker",
+			"documentclass",
+			"gcloud",
+			"getenv",
+			"gitrivy",
+			"gserviceaccount",
+			"gsutil",
+			"inputenc",
+			"jsonpath",
+			"kubectl",
+			"kubernetes",
+			"mkdir",
+			"ms",
+			"pgfgantt",
+			"postgresql",
+			"printf",
+			"pytest",
+			"rasabot",
+			"rhel",
+			"sendnow",
+			"shellcheck",
+			"styfle",
+			"substr",
+			"swapoff",
+			"trivy",
+			"unshallow",
+			"usepackage",
+			"venv",
+			"virtualenvs",
+			"voxmedia",
+			"vscode",
+			"youremail",
+			"yourmessage",
+			"yourname",
+			"youtube"
+		],
+		"todo-tree.regex.regex": "(//|#|<!--|;|%|/\\*|^|^\\s*(-|\\d+.))\\s*($TAGS)",
+		"todo-tree.filtering.includeHiddenFiles": true,
+		"todo-tree.general.showIconsInsteadOfTagsInStatusBar": true,
+		"todo-tree.general.statusBar": "top three",
+		"todo-tree.general.tagGroups": {
+			"FIXME": [
+				"FIXME",
+				"FIX"
+			],
+			"TODO": [
+				"TODO",
+				"[ ]"
+			]
+		},
+		"todo-tree.general.tags": [
+			"TODO",
+			"FIXME",
+			"FIX",
+			"DEBUG",
+			"NOTE",
+			"REVIEW",
+			"[ ]",
+		],
+		"todo-tree.highlights.customHighlight": {
+			"DEBUG": {
+				"backgroud": "yellow",
+				"foreground": "#2f3542",
+				"icon": "alert",
+				"iconColour": "yellow"
+			},
+			"FIXME": {
+				"background": "#e55039",
+				"foreground": "#2f3542",
+				"icon": "issue-reopened",
+				"iconColour": "#e55039"
+			},
+			"NOTE": {
+				"background": "#7bed9f",
+				"foreground": "#2f3542",
+				"icon": "light-bulb",
+				"iconColour": "#2ed573"
+			},
+			"REVIEW": {
+				"background": "#9980FA",
+				"foreground": "#2f3542",
+				"icon": "eye",
+				"iconColour": "#6c5ce7"
+			},
+			"TODO": {
+				"background": "#f6b93b",
+				"foreground": "#2f3542",
+				"icon": "check-circle",
+				"iconColour": "#f39c12"
+			}
+		},
+		"todo-tree.highlights.defaultHighlight": {
+			"type": "tag"
+		},
+		"todo-tree.highlights.enabled": true,
+		"todo-tree.highlights.useColourScheme": true,
+		"todo-tree.regex.enableMultiLine": true,
+		"todo-tree.tree.groupedByTag": true,
+		"todo-tree.tree.showCountsInTree": true,
+	},
+
+	// Add the IDs of extensions you want installed when the container is created.
+	"extensions": [
+		"james-yu.latex-workshop",
+		"Gruntfuggly.todo-tree",
+		"streetsidesoftware.code-spell-checker",
+		"tlahmann.alex-linter",
+		"esbenp.prettier-vscode"
+	],
+
+	// Use 'forwardPorts' to make a list of ports inside the container available locally.
+	// "forwardPorts": [],
+
+	// Uncomment to use the Docker CLI from inside the container. See https://aka.ms/vscode-remote/samples/docker-from-docker.
+
+	// Uncomment when using a ptrace-based debugger like C++, Go, and Rust
+	// "runArgs": [ "--cap-add=SYS_PTRACE", "--security-opt", "seccomp=unconfined" ],
+
+	// Comment out connect as root instead. More info: https://aka.ms/vscode-remote/containers/non-root.
+	"remoteUser": "vscode"
+}
