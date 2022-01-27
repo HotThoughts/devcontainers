@@ -6,7 +6,9 @@ RUN apt-get update && \
   apt-get install --no-install-recommends -y \
   biber \
   latexmk \
-  texlive-full && \
+  texlive-full \
+  pandoc \
+  build-essential && \
   # Cleanup
   apt-get clean -y && \
   apt-get autoremove -y && \
