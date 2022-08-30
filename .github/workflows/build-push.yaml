@@ -16,6 +16,11 @@ jobs:
     strategy:
       matrix:
         context: [LaTeX, R]
+        include:
+          - context: LaTeX
+            tag: latex-pandoc
+          - context: R
+            tag: r
     permissions:
       contents: read
       packages: write
@@ -42,5 +47,5 @@ jobs:
         with:
           context: ${{ matrix.context }}
           push: true
-          tags: ${{ steps.meta.outputs.tags }}
+          tags: ${{ matrix.tag }}
           labels: ${{ steps.meta.outputs.labels }}
