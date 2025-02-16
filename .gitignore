@@ -1,0 +1,4 @@
+.trunk/**
+!.trunk/.gitignores
+!.trunk/trunk.yaml
+!.trunk/configs/**
